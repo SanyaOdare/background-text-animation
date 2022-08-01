@@ -1,10 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Albert Sans', sans-serif;
+  font-family: 'Barlow', sans-serif;
+}
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 3rem;
+  width: 100vw;
+}
+
+h1 {
+  position: relative;
+}
+
+h2 {
+  bottom: 35.8%;
+  color: #808080;
+  font-size: 2.5rem;
+  font-weight: 400;
+  right: 38%;
+  letter-spacing: 1rem;
+  position: absolute;
+}
+
+.container h1 {
+  animation: animate 15s ease-in-out infinite;
+  color: rgba(255, 255, 255, 0.01);
+  background-image: url("https://images.unsplash.com/photo-1552710307-537199cd41c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80");
+  background-repeat: repeat;
+  font-size: 12rem;
+  font-weight: 900;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+  -webkit-background-clip: text;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right bottom;
+  }
+  50% {
+    background-position: left bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+}
+
+@media (max-width: 576px) {
+  .container h1 {    
+    font-size: 9rem;   
+  }
+  
+  h2 {
+    bottom: 39.8%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    right: 40%;
+    letter-spacing: 0.8rem;
+    position: absolute;
+  }
 }
