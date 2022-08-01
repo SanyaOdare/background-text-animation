@@ -76,3 +76,15 @@ h2 {
     position: absolute;
   }
 }
+
+@media (max-width: 380px) {
+  .container h1 {    
+    font-size: 8rem;   
+  }
+  
+  h2 {
+    bottom: 38%;
+    font-size: 1.4rem;
+    right: 37%;
+  }
+}
